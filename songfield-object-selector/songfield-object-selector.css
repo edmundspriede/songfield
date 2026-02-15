@@ -1,0 +1,152 @@
+/**
+ * Songfield Object Selector - Styles
+ */
+
+.songfield-object-selector {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.songfield-selector-container {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.songfield-current-container {
+    
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+}
+
+.songfield-selector-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.songfield-selector-dropdown {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333333;
+    background-color: #ffffff;
+    
+    cursor: pointer;
+}
+
+.songfield-selector-dropdown:hover {
+    border-color: #999999;
+}
+
+.songfield-selector-dropdown:focus {
+    border-color: #4a90e2;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.songfield-selector-dropdown:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.songfield-selector-dropdown option {
+    padding: 8px;
+}
+
+.songfield-selector-loading,
+.songfield-selector-status {
+    text-align: center;
+    padding: 16px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.songfield-selector-loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.songfield-selector-status {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: #f0f8ff;
+    border: 1px solid #b3d9ff;
+    border-radius: 4px;
+    color: #0066cc;
+    font-size: 13px;
+}
+
+.songfield-selector-error {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #fff0f0;
+    border: 1px solid #ffcccc;
+    border-radius: 4px;
+    color: #cc0000;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.songfield-selector-success {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #f0fff4;
+    border: 1px solid #b3e6cc;
+    border-radius: 4px;
+    color: #006633;
+    font-size: 14px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .songfield-selector-container {
+        padding: 16px;
+    }
+    
+    .songfield-selector-dropdown {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Elementor compatibility */
+.elementor-widget-container .songfield-object-selector {
+    max-width: 100%;
+}
+
+.button-icon svg{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
